@@ -3,12 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>ufrn.imd.br</groupId>
+        <groupId>ufrn.imd.br</groupId>
+        <artifactId>distributed-ai-microservices-spring</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 	<artifactId>microservice3-serverless-function</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservice3-serverless-function</name>
@@ -27,8 +25,6 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
-		<spring-cloud.version>2025.0.0</spring-cloud.version>
 	</properties>
 	<dependencies>
 		<dependency>
