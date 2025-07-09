@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "eureka-server"
+		},
+		{
+			"path": "api-gateway"
+		},
+		{
+			"path": "config-server"
+		},
+		{
+			"path": "microservice-ia"
+		},
+		{
+			"path": "microservice-mcp"
+		},
+		{
+			"path": "microservice-serverless"
+		},
+		{
+			"path": "../distributed-ai-config"
+		},
+		{
+			"path": "simulator-external-mcp"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
