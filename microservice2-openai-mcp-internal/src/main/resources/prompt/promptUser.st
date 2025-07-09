@@ -1,1 +1,0 @@
-Desta forma, responda essa pergunta: {userMessage}
