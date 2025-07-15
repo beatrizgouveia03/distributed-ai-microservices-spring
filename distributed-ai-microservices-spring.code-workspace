@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "simulator-external-mcp"
+		},
+		{
+			"path": "../../Downloads/prometheus-3.5.0.linux-amd64"
 		}
 	],
 	"settings": {
