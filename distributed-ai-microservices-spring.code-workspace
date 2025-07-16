@@ -25,10 +25,10 @@
 			"path": "../distributed-ai-config"
 		},
 		{
-			"path": "simulator-external-mcp"
+			"path": "../../Downloads/prometheus-3.5.0.linux-amd64"
 		},
 		{
-			"path": "../../Downloads/prometheus-3.5.0.linux-amd64"
+			"path": "journal-service"
 		}
 	],
 	"settings": {
