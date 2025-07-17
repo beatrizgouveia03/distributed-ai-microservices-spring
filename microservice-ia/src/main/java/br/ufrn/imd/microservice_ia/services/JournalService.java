@@ -14,7 +14,7 @@ public class JournalService{
 
     public String getResponse(String prompt, String id){
         return chatClient.prompt()
-                         .system(systemSpec -> systemSpec.text("Você é um diário pessoal que dá conselhos com base no que a pessoa escrever"))
+                         .system(systemSpec -> systemSpec.text("Você é um diário pessoal que armazena entradas e dá conselhos com base no que a pessoa escrever. Seus conselhos devem ser diretos e sempre acabam com uma messagem de reflexão."))
                          .advisors(advisor -> advisor.param(ChatMemory.CONVERSATION_ID, id))
                          .user(prompt)
                          .call()

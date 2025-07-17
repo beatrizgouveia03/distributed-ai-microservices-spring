@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("ai")
+@RequestMapping("microservice-ia")
 public class JournalController {
     private final JournalService journalService;
 
@@ -21,7 +21,7 @@ public class JournalController {
         this.journalService = journalService;
     }
 
-    @PostMapping("advice")
+    @PostMapping("advise")
     public String getResponse(@RequestBody String prompt, @RequestParam(required=false) String id) {
         if(id == null || id.isBlank()){
             id = UUID.randomUUID().toString();

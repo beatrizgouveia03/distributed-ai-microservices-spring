@@ -22,7 +22,7 @@ public class MicroserviceAiInterfaceConfig {
 
     @Bean
     public MicroserviceAiHttpClient microserviceAiClient(@Qualifier("AIWebClientBuilder") WebClient.Builder webClientBuilder){
-        WebClient microserviceAiWebClient = webClientBuilder.baseUrl("http://ms1")
+        WebClient microserviceAiWebClient = webClientBuilder.baseUrl("http://microservice-ai")
                                                             .build();
         
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(WebClientAdapter.create(microserviceAiWebClient))

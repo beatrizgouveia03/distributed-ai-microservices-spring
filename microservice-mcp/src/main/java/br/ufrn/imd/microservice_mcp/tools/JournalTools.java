@@ -4,7 +4,6 @@ import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-
 @Component
 public class JournalTools {
     private final WebClient client;
@@ -14,15 +13,14 @@ public class JournalTools {
     }
 
     @Tool(
-        name = "dailyAdvise",
+        name = "advice",
         description = "Advises the person basead on the journal entry that the person wrote"
     ) 
-    public String dailyAdvise(
+    public String advice(
         @ToolParam(description = "Title of the entry") String title,
-        @ToolParam(description = "Date on the entry") String date,
         @ToolParam(description = "Daily entry") String entry
     ){
-        return "Testing daily advise method";
 
+        return entry;
     }
 }
