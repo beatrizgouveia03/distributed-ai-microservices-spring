@@ -8,12 +8,9 @@ import br.ufrn.imd.journal_service.client.MicroserviceAiHttpClient;
 import br.ufrn.imd.journal_service.entity.JournalEntry;
 import br.ufrn.imd.journal_service.service.JournalService;
 
-import java.util.List;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.GetMapping;
 
 
 
