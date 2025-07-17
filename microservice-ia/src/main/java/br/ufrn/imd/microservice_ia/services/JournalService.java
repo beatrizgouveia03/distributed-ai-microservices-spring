@@ -5,14 +5,13 @@ import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class JournalService implements ChatService{
+public class JournalService{
     private final ChatClient chatClient;
 
     public JournalService(ChatClient chatClient){
         this.chatClient = chatClient;
     }
 
-    @Override
     public String getResponse(String prompt, String id){
         return chatClient.prompt()
                          .system(systemSpec -> systemSpec.text("Você é um diário pessoal que dá conselhos com base no que a pessoa escrever"))

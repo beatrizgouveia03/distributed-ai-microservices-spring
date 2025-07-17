@@ -7,12 +7,13 @@ import br.ufrn.imd.microservice_ia.services.JournalService;
 import java.util.UUID;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/journal-advices")
+@RequestMapping("ai")
 public class JournalController {
     private final JournalService journalService;
 
@@ -20,8 +21,8 @@ public class JournalController {
         this.journalService = journalService;
     }
 
-    @PostMapping("/prompt")
-    public String getResponse(@RequestParam String prompt, @RequestParam(required=false) String id) {
+    @PostMapping("advice")
+    public String getResponse(@RequestBody String prompt, @RequestParam(required=false) String id) {
         if(id == null || id.isBlank()){
             id = UUID.randomUUID().toString();
         }

@@ -25,14 +25,14 @@ public class JournalController {
         this.service = service;
     }
 
-    @PostMapping("/write")
-    public ResponseEntity<String> writeEntry(@RequestBody JournalEntry entry, @RequestParam(required=false) String id) {
-        String response = service.registerEntry(entry);
-        
-        return ResponseEntity.ok(response);
+    @PostMapping
+    public ResponseEntity<JournalEntry> writeEntry(@RequestBody JournalEntry entry, @RequestParam(required=false) String id) {
+        JournalEntry savedEntry = service.registerEntry(entry);
+
+        return ResponseEntity.ok(savedEntry);
     }
 
-    @GetMapping("/entries")
+    @GetMapping
     public List<JournalEntry> listEntries() {
         return service.listAll();
     }

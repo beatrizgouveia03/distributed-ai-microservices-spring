@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
-public class ClientConfig {
+public class WebClientConfig {
     
     @Bean
     @LoadBalanced
-    public WebClient.Builder ClientConfig(){
+    public WebClient.Builder WebClientBuilder(){
         return WebClient.builder();
     }
 }

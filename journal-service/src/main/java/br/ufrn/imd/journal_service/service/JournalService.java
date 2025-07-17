@@ -23,8 +23,7 @@ public class JournalService {
         return journalRep.findAll();
     }
 
-    public String registerEntry(JournalEntry entry){
-        return journalRep.registerEntry(entry);
-
+    public JournalEntry registerEntry(JournalEntry entry){
+        return journalRep.save(entry);
     }
 }
